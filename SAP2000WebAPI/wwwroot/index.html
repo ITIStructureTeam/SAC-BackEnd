@@ -1,0 +1,768 @@
+<!doctype html>
+<html>
+
+<head>
+    <link href="Assets/metro4-dist/css/metro-all.min.css" rel="stylesheet" />
+    <link href="Assets/css/style.css" rel="stylesheet" />
+    <link href="Assets/images/KiweIcon.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./Assets/css/section-material style.css">
+    <link rel="stylesheet" href="./Assets/css/Scene.css">  
+
+    <meta charset="utf-8">
+    <!-- Provide a short description of the page. -->
+    <meta name="Structural Analysis Software" content="Software as a Service for Structural Analysis">
+    <!-- This meta tag tells Google not to show the sitelinks search box. -->
+    <meta name="KIWE" content="nositelinkssearchbox" />
+    <!-- Control the behavior of search engine crawling and indexing. 
+ The robots meta tag applies to all search engines, while the "googlebot" meta tag is specific to Google. -->
+    <meta name="robots" content="..., ..." />
+    <meta name="http-equiv" content="X-Robots-Tag : noindex, follow" />
+    <meta name="googlebot" content="..., ..." />
+    <!-- Used for verifying ownership of a site. -->
+    <meta name="verify" content="" />
+
+    <!-- Open Graph Meta Tags -->
+    <!-- Set the canonical URL for the page you are sharing. -->
+    <meta property="og:url" content="http://www.mySite.com/">
+    <!-- The title to accompany the URL. -->
+    <meta property="og:title" content="My Site" />
+    <!-- Provides Facebook the name that you would like your website to be recognized by. -->
+    <meta property="og:site_name" content="My Website">
+    <!-- Provides Facebook the type of website that you would like your website to be categorized by. -->
+    <meta property="og:type" content="website">
+    <!-- Defines the language, American English is the default. -->
+    <meta property="og:locale" content="en-IN">
+    <!-- Directs Facebook to use the specified image when the page is shared. -->
+    <meta property="og:image" content="image URL">
+    <!-- Similar to the meta description tag in HTML. This description is shown below the link title on Facebook. -->
+    <meta property="og:description" content="This is site description." />
+
+    <!-- Twitter Card data -->
+    <!-- The type of card to be created: summary, photo, or video -->
+    <meta name="twitter:card" content="summary" />
+    <!-- Title of the Twitter Card -->
+    <meta name="twitter:title" content="Title less than 70 characters" />
+    <!-- Description of content -->
+    <meta name="twitter:description" content="Description less than 200 characters" />
+    <!-- URL of image to use in the card. Used with summary, summary_large_image, player cards -->
+    <meta name="twitter:image" content="" />
+
+</head>
+
+<body >
+    <div id="webgl">
+        <!-- SideBar -->
+        <!-- <aside class="sidebar pos-absolute z-1" data-role="sidebar" data-toggle="#sidebar-toggle-4" id="sb4" data-static-shift=".shifted-content-2" data-static="md">
+            <div class="sidetitlebar">Information bar</div>
+
+            <ul class="sidebar-menu">
+                <div> <button class="button shadowed button primary sidebarbtn">Button 01</button></div>
+                <div> <button class="button shadowed button secondary sidebarbtn">Button 02</button></div>
+                <div> <button class="button shadowed button success sidebarbtn">Button 03</button></div>
+                <div> <button class="button shadowed button info sidebarbtn">Button 04</button></div>
+                <div> <button class="button shadowed button yellow sidebarbtn">Button 05</button></div>
+                <div> <button class="button shadowed button primary sidebarbtn">Button 01</button></div>
+                <div> <button class="button shadowed button secondary sidebarbtn">Button 02</button></div>
+                <div> <button class="button shadowed button success sidebarbtn">Button 03</button></div>
+                <div> <button class="button shadowed button info sidebarbtn">Button 04</button></div>
+                <div class="sidebarbtn"></div>
+            </ul>
+        </aside> -->
+        <!-- KIWE Button -->
+
+        <aside class="sidebar pos-absolute z-2" data-role="sidebar" data-toggle="#sidebar-toggle-2" id="sb1">
+            <div class="sidebar-header" data-image="Assets/images/KIEW.jpg">
+                <a href="/" class="fg-dark sub-action" onclick="Metro.sidebar.close('#sb1'); return false;">
+                    <span class="mif-arrow-left mif-2x"></span>
+                </a>
+                <div class="avatar">
+                    <img src="Assets/images/kiwi-icon-27.png" data-email="islam_eng2010@yahoo.com">
+                </div>
+                <div class="title bold fg-white">KIWE Structural Analysis</div>
+                <div class="subtitle fg-white"> 2021 © ITI CEI IN_41</div>
+            </div>
+            <ul class="sidebar-menu icon">
+                <li><a><span> <img src="Assets/images/newIcon.png" alt="newIcon" height="32" width="32" /> </span> New
+                    </a>
+                </li>
+                <li>
+                    <a> <span><img height="32" width="32" src="Assets/images/OpenIcon.png" alt="OpenIcon"> </span> Open
+                    </a>
+                </li>
+                <li>
+                    <a> <span><img height="32" width="32" src="Assets/images/SaveIcon.jpg" alt="SaveIcon"> </span> Save
+                    </a>
+                </li>
+                <li>
+                    <a> <span><img height="32" width="32" src="Assets/images/SaveAsIcon.png " alt="SaveAsIcon"></span> Save As </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a class="dropdown-toggle"> <span><img height="32" width="32" src="Assets/images/ImportIcon.png"
+                                alt="ImportIcon"></span> Import </a>
+                    <ul class="d-menu" data-role="dropdown" data-duration="100">
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/Sap2000Icon.png" alt="SapIcon">
+                                </span> Sap2000 .s2k File ... </a>
+                        </li>
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/etabsIcon.png" alt="EtabsIcon">
+                                </span> ETABS .e2k File ... </a>
+                        </li>
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/safeicon.jpg" alt="SafeIcon">
+                                </span> SAFE .s2k File ...
+                            </a>
+                        </li>
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/IFCICON.png" alt="IfcIcon">
+                                </span> REVIT .ifc File ...
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle"> <span><img height="32" width="32" src="Assets/images/ExportIcon.jpg"
+                                alt="ExportIcon"></span> Export </a>
+                    <ul class="d-menu" data-role="dropdown" data-duration="100">
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/Sap2000Icon.png" alt="SapIcon">
+                                </span> Sap2000 .s2k File ... </a>
+                        </li>
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/etabsIcon.png" alt="EtabsIcon">
+                                </span> ETABS .e2k File ... </a>
+                        </li>
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/safeicon.jpg" alt="SafeIcon">
+                                </span> SAFE .s2k File ...
+                            </a>
+                        </li>
+                        <li>
+                            <a> <span> <img height="32" width="32" src="Assets/images/IFCICON.png" alt="IFCIcon">
+                                </span> REVIT .ifc File ...
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a> <span><img height="32" width="32" src="Assets/images/printIcon.jpg"
+                                alt="PrintIcon"></span>Print</a>
+                </li>
+                <li class="divider"></li>
+                <li onclick="Metro.dialog.open('#closebtn')">
+                    <a> <span><img height="32" width="32" src="Assets/images/CloseIcon.png"
+                                alt="CloseIcon"></span>Close</a>
+                </li>
+                <li class="divider"></li>
+
+
+            </ul>
+        </aside>
+        <!-- Ribbon Menu -->
+        <nav data-role="ribbonmenu" id="ribbon">
+
+            <!-- Ribbon Tabs -->
+            <ul class="tabs-holder">
+                <li class="static" id="sidebar-toggle-2" style="cursor: pointer;"><a>File</a></li>
+                <!-- File-->
+                <li><a href="#Edit-Section">Edit</a></li>
+                <!-- Edit-->
+                <li><a href="#View-Section">View</a></li>
+                <!-- View-->
+                <li><a href="#Define-Section">Define</a></li>
+                <!-- Define-->
+                <li><a href="#Draw-Section">Draw</a></li>
+                <!-- Draw-->
+                <li><a href="#Select-Section">Select</a></li>
+                <!-- Select-->
+                <li><a href="#Assign-Section">Assign</a></li>
+                <!-- Assign-->
+                <li><a href="#Analyse-Section">Analysis & Results</a></li>
+                <!-- Analyse-->
+                <li><a href="#Options-Section">Options</a></li>
+                <!-- Options-->
+            </ul>
+            <!-- Ribbon Pannels and Buttons -->
+            <div class="content-holder">
+                <!-- Edit Tab -->
+                <div class="section" id="Edit-Section">
+                    <!-- Actions Group (Pannel)  Tab Edit -->
+                    <div class="group">
+                        <button id="Undo" class="ribbon-button" data-role="hint" data-hint-position="bottom" data-hint-text="Undo">
+                            <span class="icon">
+                                <img src="Assets/images/UndoIcon.png" alt="Undo">
+                            </span>
+                            <span class="caption">Undo</span>
+                        </button>
+                        <button id="Redo" class="ribbon-button" data-role="hint" data-hint-position="bottom" data-hint-text="Redo">
+                            <span class="icon">
+                                <img src="Assets/images/RedoIcon.png" alt="Redo">
+                            </span>
+                            <span class="caption">Redo</span>
+                        </button>
+                        <span class="title">Actions</span>
+                    </div>
+                    <!-- Modify Group (Pannel)    Tab Edit -->
+                    <div class="group">
+
+                        <!--<button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Cut" src="Assets/images/CutIcon.png">
+                            </span>
+                            <span class="caption">Cut</span>
+                        </button>-->
+
+                        <button id = "Copy" class="ribbon-button" onclick="CopyWindow()">
+                            <span class="icon">
+                                <img alt="Copy" src="Assets/images/CopyIcon.jpg">
+                            </span>
+                            <span class="caption">Copy</span>
+                        </button>
+                        
+                        <button id = "Move" class="ribbon-button" onclick="MoveWindow()">
+                            <span class="icon">
+                                <img alt="Move" src="Assets/images/MoveIcon.png">
+                            </span>
+                            <span class="caption">Move</span>
+                        </button>
+
+                        <!--<button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Paste" src="Assets/images/PasteIcon.jpg">
+                            </span>
+                            <span class="caption">Paste</span>
+                        </button>-->
+
+                        <button id = "Delete" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Delete" src="Assets/images/DeleteIcon.jpg">
+                            </span>
+                            <span class="caption">Delete</span>
+                        </button>
+
+                        <span class="title">Modify</span>
+                    </div>
+                    <!-- Geometry Group (Pannel)    Tab Edit -->
+                    <div class="group">
+
+                        <!--<button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Replicate" src="Assets/images/ReplicateIcon.png">
+                            </span>
+                            <span class="caption">Replicate</span>
+                        </button>-->
+
+                        <button id="Extrude" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Extrude" src="Assets/images/Extrudeicon.png">
+                            </span>
+                            <span class="caption">Extrude</span>
+                        </button>
+
+                        <button id="Standard" onclick="Standard()" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Standard View" src="Assets/images/UndeformedShapeIcon.jpg">
+                            </span>
+                            <span class="caption">Standard</span>
+                        </button>
+
+                        <button id = "Move" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Move" src="Assets/images/MoveIcon.png">
+                            </span>
+                            <span class="caption">Move</span>
+                        </button>
+
+                        <span class="title">Geometry</span>
+                    </div>
+                    <!-- Elements Group (Pannel)    Tab Edit -->
+                    <div class="group">
+                        <button class="ribbon-button" id="disp-load-btn">
+                            <span class="icon">
+                                <img alt="Edit" src="Assets/images/EditPoints.png">
+                            </span>
+                            <span class="caption">Edit Points</span>
+                        </button>
+
+
+                        <div>
+                            <button class="ribbon-button dropdown-toggle">
+                                <span class="icon">
+                                    <img alt="Edit Area" src="Assets/images/EditArea.png">
+                                </span>
+                                <span class="caption">Edit Areas</span>
+                            </button>
+                            <ul class="d-menu" data-role="dropdown" data-duration="100">
+                                <li><a><span>
+                                            <img alt="Devide Area" src="Assets/images/DevideAreaIcon.png">
+                                        </span>
+                                        <span>Devide Area ...</span>
+                                    </a> </li>
+                                <li><a><span>
+                                            <img alt="Merge Area" src="Assets/images/MergeAreaIcon.png">
+                                        </span>
+                                        <span>Merge Area ...</span>
+                                    </a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button class="ribbon-button dropdown-toggle">
+                                <span class="icon">
+                                    <img alt="Edit Line" src="Assets/images/EditLines.png">
+                                </span>
+                                <span class="caption">Edit Lines</span>
+                            </button>
+                            <ul class="d-menu" data-role="dropdown" data-duration="100">
+                                <li>
+                                    <a> <span> <img alt="Frame Section" src="Assets/images/DevideLine.jpg"> </span> Devide Frame ... </a>
+                                </li>
+                                <li>
+                                    <a> <span> <img alt="Area Section" src="Assets/images/JoinFrameIcon.png"> </span> Join Frame ... </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="title">Elements</span>
+                    </div>
+                    <div class="group">
+                        <input data-role="checkbox" type="checkbox" id="Labels" data-caption="Show Labels" onclick="Labels()">
+                        <input data-role="checkbox" type="checkbox" id="Sections" data-caption="Display Section" onclick="Labels()">
+                    </div>
+
+                
+                </div>
+                <!-- View Tab -->
+                <div class="section" id="View-Section">
+
+                    <!-- Zooming Group (Pannel    Tab View) -->
+                    <div class="group">
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Zoom In" src="Assets/images/ZoomIn.png">
+                            </span>
+                            <span class="caption">Zoom IN</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Zoom out" src="Assets/images/Zoomout.png">
+                            </span>
+                            <span class="caption">Zoom OUT</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Retore View" src="Assets/images/RestoreZoom.png">
+                            </span>
+                            <span class="caption">Restore View</span>
+                        </button>
+                        <span class="title">Zooming</span>
+                    </div>
+                    <!-- UP & DOWN Group (Pannel    Tab View) -->
+                    <div class="group">
+                        <button id="Next" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Up" src="Assets/images/UPICON.png">
+                            </span>
+                            <span class="caption">UP</span>
+                        </button>
+
+                        <button id="Prev" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Down" src="Assets/images/DownIcon.png">
+                            </span>
+                            <span class="caption">DOWN</span>
+
+                        </button>
+
+                        <span class="title"> Levels </span>
+                    </div>
+                    <!-- View Group (Pannel)  Tab View -->
+                    <div class="group">
+
+                        <button id="ThreeD" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="3D" src="Assets/images/3DViewIcon.png">
+                            </span>
+                            <span class="caption">3D View</span>
+                        </button>
+
+                        <button id="XYSection" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="XY" src="Assets/images/XYIcon.png" />
+                            </span>
+                            <select id="XY"></select>
+                        </button>
+
+                        <button id="XZSection" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="XZ" src="Assets/images/XZICON.png">
+                            </span>
+                            <select id="XZ"></select>
+                        </button>
+
+                        <button id="YZSection" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="YZ" src="Assets/images/YZIcon.png">
+                            </span>
+                            <select id="YZ"></select>
+                        </button>
+                        <span class="title">View</span>
+                    </div>
+                    <!-- View Levels Group (Pannel) Tab View -->
+
+                    <div class="group"></div>
+                </div>
+                <!-- Define Tab -->
+                <div class="section" id="Define-Section">
+                    <!-- Materials Group (Pannel)    Tab Define -->
+                    <div class="group">
+                        <button id="materialsBtn" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Material" src="Assets/images/MaterialIcon.webp">
+                            </span>
+                            <span class="caption">Materials</span>
+                        </button>
+                        <span class="title">Material</span>
+                    </div>
+                    <!-- Section Properities Group (Pannel)    Tab Define -->
+                    <div class="group">
+                        <button class="ribbon-button dropdown-toggle">
+                            <span class="icon">
+                                <img alt="Section" src="Assets/images/SectionProperitiesIcon.png">
+                            </span>
+                            <span class="caption">Section Properities</span>
+                        </button>
+                        <ul class="d-menu" data-role="dropdown" data-duration="100">
+                            <li id="secBtn">
+                                <a> <span> <img alt="Frame Section" src="Assets/images/FramSectionIcon.png"> </span> Frame Section ... </a>
+                            </li>
+                            <li>
+                                <a> <span> <img alt="Area Section" src="Assets/images/AreaSectionIcon.png"> </span> Area Section ... </a>
+                            </li>
+                        </ul>
+                        <span class="title">Sections</span>
+                    </div>
+                    <!-- Loads Group (Pannel)    Tab Define -->
+                    <div class="group">
+                        <button class="ribbon-button" id="pattern-btn" data-role="hint"
+                            data-hint-position="bottom" data-hint-text="Load Pattern">
+                        <!--<button class="ribbon-button" onclick="LoadPattern()" data-role="hint"
+                            data-hint-position="bottom" data-hint-text="Load Pattern">-->
+                            <span class="icon">
+                                <img alt="Load Pattern" src="Assets/images/LoadPatternIcon.png">
+                            </span>
+                            <span class="caption">Load pattern</span>
+                        </button>
+                        <button class="ribbon-button"  data-role="hint" id="combo-btn"
+                            data-hint-position="bottom" data-hint-text="Load Combination">
+                        <!--<button class="ribbon-button" onclick="LoadCombination()" data-role="hint"
+                            data-hint-position="bottom" data-hint-text="Load Combination">-->
+                            <span class="icon">
+                                <img alt="Compo" src="Assets/images/LoadCompinationIcon.JPG">
+                            </span>
+                            <span class="caption">Load Combination</span>
+                        </button>
+                        <span class="title">Loads Properities</span>
+                    </div>
+                </div>
+                <!-- Draw Tab -->
+                <div class="section" id="Draw-Section">
+                    <!-- Draw Group (Pannel)    Tab Draw -->
+                    <div class="group">
+                        <button id="AddPoints" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Point" src="Assets/images/PointIcon.png">
+                            </span>
+                            <span class="caption">Point</span>
+                        </button>
+
+                        <button id="Draw" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Frame" src="Assets/images/FrameIcon.jpg">
+                            </span>
+                            <span class="caption">Frame</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Area" src="Assets/images/AreaIcon.png">
+                            </span>
+                            <span class="caption">Area</span>
+                        </button>
+                        <span class="title">Draw</span>
+                    </div>
+                    <div class="group">
+                        <button id="grids-btn" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Grid" src="Assets/images/GridIcon.png">
+                            </span>
+                            <span class="caption">Grids</span>
+                        </button>
+                        <span class="title">Datum</span>
+                    </div>
+
+                </div>
+                <!-- Select Tab -->
+                <div class="section" id="Select-Section">
+                    <!-- Select Properities Group (Pannel)    Tab Select -->
+                    <div class="group">
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Materials" src="Assets/images/MaterialIcon.webp">
+                            </span>
+                            <span class="caption">Material Properities</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Section" src="Assets/images/FramSectionIcon.png">
+                            </span>
+                            <span class="caption">Frame Section</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Area" src="Assets/images/AreaSectionIcon.png">
+                            </span>
+                            <span class="caption">Area Section</span>
+                        </button>
+                        <span class="title">Properities</span>
+                    </div>
+                    <div class="group"></div>
+                </div>
+                <!-- Assign Tab -->
+                <div class="section" id="Assign-Section">
+                    <!-- Case Properities Group (Pannel)    Tab Assign -->
+                    <div class="group">
+                        <button class="ribbon-button" onclick="JointRestraint()" data-role="hint"
+                        data-hint-position="bottom" data-hint-text="Add Joint Restraint">
+                            <span class="icon">
+                                <img alt="Restraint" src="Assets/images/HingedIcon.JPG">
+                            </span>
+                            <span class="caption">Joint Restraint</span>
+                        </button>
+                        <button id="assign-framesec-btn" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="FrameSection" src="Assets/images/FramSectionIcon.png">
+                            </span>
+                            <span class="caption">Frame Section</span>
+                        </button>
+                        
+                        <button id="Rotate" class="ribbon-button" onclick="RotateWindow()">
+                            <span class="icon">
+                                <img alt="LocalAxis" src="Assets/images/LocalAxis.png">
+                            </span>
+                            <span class="caption">Frame Axis</span>
+                        </button>
+                        
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Area Section" src="Assets/images/AreaSectionIcon.png">
+                            </span>
+                            <span class="caption">Area Section</span>
+                        </button>
+                        <span class="title">Case Properities</span>
+                    </div>
+                    <!-- Assign Loads Group (Pannel)    Tab Assign -->
+                    <div class="group">
+
+
+                        <button class="ribbon-button" id="point-load-btn"  data-role="hint"
+                        data-hint-position="bottom" data-hint-text="Add Point Loads">
+                            <span class="icon">
+                                <img alt="Point Load" src="Assets/images/PointLoadIcon.png">
+                            </span>
+                            <span class="caption">Point Loads</span>
+                        </button>
+                        <button class="ribbon-button" id="distributed-load-btn">
+                            <span class="icon">
+                                <img alt="Uniform" src="Assets/images/DistributedLoadsIcon.jpg">
+                            </span>
+                            <span class="caption">Distributed Loads</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Area Loads" src="Assets/images/AreaLoadsIcon.png">
+                            </span>
+                            <span class="caption">Area Loads</span>
+                        </button>
+                        <span class="title">Assign Loads</span>
+
+                    </div>
+                </div>
+                <!-- Analyse & Results Tab -->
+                <div class="section" id="Analyse-Section">
+                    <!-- Analysis Group (Pannel)    Tab Analyse & Results -->
+                    <div class="group">
+                        <button id = "Run" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Run" src="Assets/images/RunIcon.png">
+                            </span>
+                            <span class="caption">Run Analysis</span>
+                        </button>
+
+                        <span class="title">Analysis</span>
+                    </div>
+                    <!-- Displacements Group (Pannel)    Tab Analyse & Results -->
+                    <div class="group">
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Undeformed Shape" src="Assets/images/UndeformedShapeIcon.jpg">
+                            </span>
+                            <span class="caption">Undeformed Shape</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Deformed Shape" src="Assets/images/DeformedIcon.png">
+                            </span>
+                            <span class="caption">Show Deformed Shape</span>
+                        </button>
+                        <span class="title">Displacements</span>
+                    </div>
+                    <!-- Straining Actions Group (Pannel)    Tab Analyse & Results -->
+                    <div class="group">
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Reactions" src="Assets/images/ReactionIcon.jpg">
+                            </span>
+                            <span class="caption">Reactions</span>
+                        </button>
+                        <span class="title">Joint Reactions</span>
+                    </div>
+                    <div class="group">
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Axial Force" src="Assets/images/NormalIcon.png">
+                            </span>
+                            <span class="caption">Normal Force</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Moment" src="Assets/images/MomentIcon.png">
+                            </span>
+                            <span class="caption">Bending Moment 2</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Moment" src="Assets/images/MomentIcon.png">
+                            </span>
+                            <span class="caption">Bending Moment 3</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Moment" src="Assets/images/ShearIcon.PNG">
+                            </span>
+                            <span class="caption">Shear Force 2</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Moment" src="Assets/images/ShearIcon.PNG">
+                            </span>
+                            <span class="caption">Shear Force 3</span>
+                        </button>
+                        <span class="title">Straining Actions</span>
+                    </div>
+
+                </div>
+                
+                <!-- Option Tab -->
+                <div class="section" id="Options-Section">
+                    <div class="group">
+                        <button id="units-btn" class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Dimensions" src="Assets/images/DimensionsIcon.png">
+                            </span>
+                            <span class="caption">Units & Dimensions</span>
+                        </button>
+                        <button class="ribbon-button">
+                            <span class="icon">
+                                <img alt="Colors" src="Assets/images/ColorsIcon.png">
+                            </span>
+                            <span class="caption">Colors</span>
+                        </button>
+
+                        <span class="title">Settings</span>
+                    </div>
+                    <div class="group"></div>
+                </div>
+            </div>
+
+            <button id="resizeribbonbtn" onclick="resizeribbon()" data-role="hint" data-hint-text="Resize Ribbon" data-hint-position="left">
+                &#8597;
+            </button>
+        </nav>
+
+        <!-- Status Bar -->
+        <div style="background-color: rgb(235,235,235); z-index: 3; position: absolute;" id="Status_bar">
+            <img style="width: 20px; margin-left: 10px; margin-bottom: 5px; margin-top: 5px; " src="Assets/images/KiweIcon.png" alt="KiweIcon" />
+            <span id = "StatusBar">Welcome to KIEW Structural Analysis - Status Bar - </span>
+        </div>
+
+
+        <!-- Close Action ((Warning Message)) -->
+        <div class="dialog" data-role="dialog" id="closebtn" data-close-button="true">
+            <div class="dialog-title text-bold">
+                <img style="width: 60px; margin-left: 10px; margin-bottom: 5px; margin-top: 5px; " src="Assets/images/KiweIcon.png" alt="KiweIcon" /> KIWE Structural Analysis
+
+            </div>
+            <div class="dialog-content text-medium">
+                <img height="60" width="60" src="Assets/images/CloseIcon.png" alt="CloseIcon"> Do you want to save the changes you made??
+                <div class="text-right text-normal">Your changes will be lost if you don't save them</div>
+            </div>
+
+            <div class="dialog-actions">
+                <button class="button primary js-dialog-close">Agree</button>
+                <button class="button js-dialog-close">Disagree</button>
+            </div>
+        </div>
+    </div>
+
+    <title>KIWE STRUCTURES</title>
+    <script src="./Assets/metro4-dist/js/metro.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="./Assets//node_modules/three/build/three.js"></script> -->
+    <!-- <script src="./Assets//node_modules/three/examples/js/controls/OrbitControls.js"></script> -->
+
+    <script src="./Assets/material and section/Material.js"></script>
+    <script src="./Assets/material and section/Section.js"></script>
+
+    <script src="./Assets/Three.js files/stats.js"></script>
+    <script type="module" src="./Assets/Three.js files/CSS2DRenderer.js"></script>
+    <script type="module" src="./Assets/Three.js files/three.module.js"></script>
+    <script src="./Assets/Three.js files/three.min.js"></script>
+    <script src="./Assets/Three.js files/LineSegmentsGeometry.js"></script>
+    <script src="./Assets/Three.js files/CurveExtras.js"></script>
+    <script src="./Assets/Three.js files/LineGeometry.js"></script>
+    <script src="./Assets/Three.js files/LineMaterial.js"></script>
+    <script src="./Assets/Three.js files/LineSegments2.js"></script>
+    <script src="./Assets/Three.js files/Line2.js"></script>
+    <script src="./Assets/Three.js files/SelectionBox-mod.js"></script>
+    <script src="./Assets/Three.js files/SelectionHelper.js"></script>
+    <script type="module" src="./Assets/Three.js files/OrbitControls.js"></script>
+
+    <script type="module" src="main.js"></script>
+
+    <script src="./Assets/Loads.js/loads-classes.js"></script> 
+    <script src="./Classes.js"></script>
+    <script src="./global.js"></script>
+    <script src="./TextLabels.js"></script>
+    <script src="./GlobalArrows.js"></script>
+    <script src="./Assets/js/main3.js"></script>
+    <script src="./Assets/js/Assign.js"></script>
+    <script src="./Assets/Units.js/Units.js"></script>
+    <script src="./Assets/grids.js/Grids.js"></script>
+    <!--<script src="./Assets/js/BelalLoads.js"></script>-->
+       
+    <script src="./Assets/Loads.js/LoadPatternWindow.js"></script>
+    <script src="./Assets/Loads.js/LoadComboWindow.js"></script>
+    <script src="./Assets/Units.js/UnitsWindow.js"></script>
+    <script src="./Assets/Loads.js/AssignLoadWindow.js"></script>
+    <script src="./Assets/Loads.js/DisplayLoadsWindow.js"></script>
+    <script src="./Assets/material and section/MaterialMetroForm.js"></script>
+    <script src="./Assets/material and section/SectionMetroForm.js"></script>
+    <script src="./Assets/material and section/Drawingwindow.js"></script>
+    <script src="./Assets/material and section/AssignFrameSectionForm.js"></script>
+
+</body>
+
+</html>

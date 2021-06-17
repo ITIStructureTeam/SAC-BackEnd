@@ -1,0 +1,78 @@
+#xyzplansbtn {
+    height: 0;
+}
+
+#toolbaricons {
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    right: 0px;
+}
+
+#ribbon {
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#Status_bar {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding-top: 3px;
+    background-color: rgb(235, 235, 235);
+    z-index: 3;
+    font-size: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#sb1 {
+    height: 170;
+    margin-top: 44px;
+}
+
+#sb4 {
+    margin-top: 128px;
+    background-color: rgb(235, 235, 235);
+    width: 300px;
+    z-index: 1;
+}
+
+.sidebarbtn {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 235px;
+    border-radius: 25px;
+}
+
+.sidetitlebar {
+    background-color: #DDD;
+    border: solid black 0.3px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    z-index: 3;
+    width: inherit;
+}
+
+#resizeribbonbtn {
+    position: absolute;
+    top: 76%;
+    left: 97.9%;
+    border: hidden;
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+}
+
+.select .option-list a {
+    padding: 0 0rem 0 0rem;
+}
+.LoadPatternItems{
+    margin: 3px;
+}
+#RestraintBtnGroup{
+    height: 50px;
+}

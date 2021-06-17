@@ -1,0 +1,200 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj",
+        "projectName": "SAP2000WebAPI.Application",
+        "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ahmed Dawood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
+        "projectName": "SAP2000WebAPI.Domain",
+        "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ahmed Dawood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj",
+        "projectName": "SAP2000WebAPI",
+        "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ahmed Dawood\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj"
+              },
+              "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

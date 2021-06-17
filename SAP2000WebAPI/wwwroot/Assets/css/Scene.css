@@ -1,0 +1,333 @@
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+
+/* #webgl{
+        overflow-x:hidden;
+        overflow-y:hidden;
+    } */
+
+.selectBox {
+    visibility: initial;
+    border: 1px solid #55aaff;
+    background-color: rgba(75, 160, 255, 0.3);
+    position: fixed;
+}
+
+
+/* #Undo
+    {
+        position:fixed;
+        margin-left:10%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 16px;
+    }
+    #Redo
+    {
+        position:absolute;
+        margin-left: 13.8%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 16px;
+    } */
+
+
+/* #Standard
+    {
+        position:absolute;
+        margin-left: 17.5%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 16px;
+    } */
+
+
+/* #Extrude
+    {
+        position:absolute;
+        margin-left: 23%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 16px;
+    } */
+
+
+/* 
+#Labels {
+    position: absolute;
+    margin-left: 29%;
+    margin-top: 18px;
+    border-radius: 5px;
+    background-color: rgb(253, 250, 246);
+}
+
+#labels {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: rgb(253, 250, 246);
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 16px;
+} */
+
+
+/* 
+#Sections {
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 18px;
+    border-radius: 5px;
+    background-color: rgb(253, 250, 246);
+}
+
+#sections {
+    position: absolute;
+    margin-left: 36%;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: rgb(253, 250, 246);
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 16px;
+} */
+
+#CS {
+    position: absolute;
+    margin-left: 48.5%;
+    margin-top: 18px;
+    border-radius: 5px;
+    background-color: rgb(253, 250, 246);
+}
+
+#Cs {
+    position: absolute;
+    margin-left: 42%;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: rgb(253, 250, 246);
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* #Draw
+    {
+        position:absolute;
+        margin-left: 54%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 16px;
+    } */
+
+
+/* #Grids{
+        position:absolute;
+        margin-left: 58%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 16px;
+    } */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#grids_tableX {
+    margin: 7px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: block;
+}
+
+#grids_tableY {
+    margin: 7px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: block;
+}
+
+#grids_tableZ {
+    margin: 7px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: block;
+}
+
+#table_head {
+    margin: 7px;
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+tbody {
+    display: block;
+    height: 100px;
+    overflow-y: auto;
+    /* Trigger vertical scroll    */
+    overflow-x: hidden;
+    /* Hide the horizontal scroll */
+}
+
+
+/* #XYSection{
+        position:absolute;
+        margin-left: 66%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 12px;
+    }
+    #XY{
+        position:absolute;
+        margin-left: 68%;
+        margin-top: 18px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+    }
+    #XZSection{
+        position:absolute;
+        margin-left: 74%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 12px;
+    }
+    #XZ{
+        position:absolute;
+        margin-left: 76%;
+        margin-top: 18px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+    }
+    #YZSection{
+        position:absolute;
+        margin-left: 81%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 12px;
+    }
+    #YZ{
+        position:absolute;
+        margin-left: 83%;
+        margin-top: 18px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+    }
+
+    #ThreeD{
+        position:absolute;
+        margin-left: 87%;
+        margin-top: 18px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+    }
+
+    #Next{
+        position:absolute;
+        margin-left: 95%;
+        margin-top: 15px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 12px;
+    }
+    #Prev{
+        position:absolute;
+        margin-left: 95%;
+        margin-top: 38px;
+        border-radius: 5px;
+        background-color: rgb(253, 250, 246);
+        font-family:  'Calibri';
+        font-weight: bold;
+        font-size: 12px;
+    } */

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SAP2000WebAPI.Data/1.0.0": {
+        "runtime": {
+          "SAP2000WebAPI.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SAP2000WebAPI.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oh1klANcfHbEaMha0TYjo2voZD2p962KyCYa65eWEI7KpoGjRBpfi4rVn9HVMIV1Ci5sJpAf0loXCr1h3Gr7QA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
