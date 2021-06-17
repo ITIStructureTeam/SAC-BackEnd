@@ -92,11 +92,6 @@ namespace SAP2000WebAPI.Application.ManageModel
 
         #endregion
 
-        public static void CheckAgain()
-        {
-
-        }
-
         #region Import Project
 
         //import all project Names
