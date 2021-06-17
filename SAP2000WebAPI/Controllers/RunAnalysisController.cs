@@ -3,6 +3,7 @@ using SAP2000WebAPI.Domain;
 using SAP2000WebAPI.Application.ManageModel;
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace SAP2000WebAPI.Controllers
 {    
@@ -44,7 +45,8 @@ namespace SAP2000WebAPI.Controllers
             try
             {
                 bool Response_ = ManageModel.CheckModelName(ProjectName);
-                return Ok(Response_);
+                string ValidationResult = JsonConvert.SerializeObject(Response_.ToString());                
+                return Ok(ValidationResult);
             }
             catch (Exception ex)
             {
@@ -58,7 +60,8 @@ namespace SAP2000WebAPI.Controllers
             try
             {
                 List<string> ProjectsNames = ManageModel.GetProjectsNames();
-                return Ok(ProjectsNames);
+                string ProjectsList = JsonConvert.SerializeObject(ProjectsNames);
+                return Ok(ProjectsList);
             }
             catch (Exception ex)
             {
@@ -72,7 +75,8 @@ namespace SAP2000WebAPI.Controllers
             try
             {
                 string ProjectData = ManageModel.ImportProject(ProjetName);
-                return Ok(ProjectData);
+                string ModelData = JsonConvert.SerializeObject(ProjectData);
+                return Ok(ModelData);
             }
             catch (Exception ex)
             {
