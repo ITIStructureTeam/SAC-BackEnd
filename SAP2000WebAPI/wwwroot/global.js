@@ -1,1 +1,0 @@
-var scene, camera, controls;
