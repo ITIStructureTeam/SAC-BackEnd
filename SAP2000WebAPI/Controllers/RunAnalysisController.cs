@@ -39,8 +39,8 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
-        [HttpGet("CheckModelName")]
-        public IActionResult CheckModelName(string ProjectName)
+        [HttpPost("CheckModelName")]
+        public IActionResult CheckModelName([FromBody]string ProjectName)
         {
             try
             {
@@ -69,8 +69,8 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
-        [HttpGet("ImportProject")]
-        public IActionResult ImportProject(string ProjetName)
+        [HttpPost("ImportProject")]
+        public IActionResult ImportProject([FromBody]string ProjetName)
         {
             try
             {
