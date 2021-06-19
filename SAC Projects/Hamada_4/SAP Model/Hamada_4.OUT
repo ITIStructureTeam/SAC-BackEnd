@@ -1,0 +1,18 @@
+ SAP2000 v18.2.0 Ultimate 64-bit (Analysis Build 9503/64)                       
+ File: C:\Users\Ahmed Dawood\D...PI\SAC Projects\Hamada_4\SAP Model\Hamada_4.OUT
+                                                                     
+                                                                       
+
+ D I S P L A C E M E N T   D E G R E E S   O F   F R E E D O M
+
+         (A) = Active DOF, equilibrium equation
+         (-) = Restrained DOF, reaction computed
+         (+) = Constrained DOF
+         (>) = External substructure DOF
+         ( ) = Null DOF
+
+  JOINTS              UX  UY  UZ  RX  RY  RZ
+       1               A   A   A   A   A   A
+       2               -   -   -   A   A   A
+       3               A   A   -   A   A   A
+ 1000000 TO 2000003    A   A   A   A   A   A

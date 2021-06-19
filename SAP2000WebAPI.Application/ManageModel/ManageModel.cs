@@ -66,11 +66,14 @@ namespace SAP2000WebAPI.Application.ManageModel
 
     public class ManageModel : IMangeModel
     {
+        public static string RelativeUserDirectory = @"..\SAC Projects";
+        public static readonly string UserDirectory = Path.GetFullPath(RelativeUserDirectory);
+
         #region Validate Model Name
 
         public static bool CheckModelName(string ProjectName)
         {
-            string ModelDirectory = @"E:\SAC Projects\" + ProjectName;
+            string ModelDirectory = UserDirectory + ProjectName;
             if (Directory.Exists(ModelDirectory))
             {
                 return false;
@@ -98,7 +101,7 @@ namespace SAP2000WebAPI.Application.ManageModel
         //it will have user data in the future to allow access to certain folder
         public static List<string> GetProjectsNames()
         {
-            string ModelDirectory = @"E:\SAC Projects"; //replaced by user directory
+            string ModelDirectory = UserDirectory; //replaced by user directory
             string[] subdirectoryEntries = Directory.GetDirectories(ModelDirectory);
             List<string> ProjectsName = new List<string>();
             foreach (var Dir in subdirectoryEntries)
@@ -113,7 +116,7 @@ namespace SAP2000WebAPI.Application.ManageModel
         {
             string jsonData = string.Empty;
 
-            using (StreamReader r = new StreamReader(@"E:\SAC Projects\" + ProjectName + @"\Model JSON Data\" + "ModelData.json"))
+            using (StreamReader r = new StreamReader(UserDirectory + Path.DirectorySeparatorChar + ProjectName + @"\Model JSON Data\" + "ModelData.json"))
             {
                 jsonData = r.ReadToEnd();
                 r.Close();
@@ -129,8 +132,8 @@ namespace SAP2000WebAPI.Application.ManageModel
         public static void SaveModel(RootObject ModelDataObject)
         {
             string ModelName = ModelDataObject.ProjectName.Trim();
-            string ProjectDir = @"E:\SAC Projects\" + ModelName;
-            string JsonDirectory = @"E:\SAC Projects\" + ModelName + @"\Model JSON Data";
+            string ProjectDir = UserDirectory + Path.DirectorySeparatorChar + ModelName;
+            string JsonDirectory = UserDirectory + Path.DirectorySeparatorChar + ModelName + @"\Model JSON Data";
             string JsonPath = JsonDirectory + Path.DirectorySeparatorChar + "ModelData.json";
 
             string ModelJsonData = JsonConvert.SerializeObject(ModelDataObject);            
@@ -172,7 +175,7 @@ namespace SAP2000WebAPI.Application.ManageModel
             RootObject ModelDataObject;
             ProjectName = ProjectName.Trim();
 
-            string ModelDirectory = @"E:\SAC Projects\" + ProjectName + @"\SAP Model";
+            string ModelDirectory = UserDirectory + Path.DirectorySeparatorChar + ProjectName + @"\SAP Model";
 
             if (!Directory.Exists(ModelDirectory))
             {
@@ -184,7 +187,7 @@ namespace SAP2000WebAPI.Application.ManageModel
                 Directory.CreateDirectory(ModelDirectory);
             }
 
-            using (StreamReader r = new StreamReader(@"E:\SAC Projects\" + ProjectName + @"\Model JSON Data\" + "ModelData.json"))
+            using (StreamReader r = new StreamReader(UserDirectory + Path.DirectorySeparatorChar + ProjectName + @"\Model JSON Data\" + "ModelData.json"))
             {
                 string jsonData = r.ReadToEnd();
                 ModelDataObject = JsonConvert.DeserializeObject<RootObject>(jsonData);
