@@ -10,7 +10,8 @@ namespace SAP2000WebAPI.Controllers
     [ApiController]
     [Route("api/[Controller]")]
     public class RunAnalysisController : ControllerBase
-    {        
+    {
+        //Create Sap Model and return results
         [HttpPost("LoadFramesData")]
         public IActionResult LoadFrameData([FromBody]string ProjectName)
         {
@@ -25,6 +26,7 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
+        //Save Sap Model in user directory
         [HttpPost("SaveModel")]
         public IActionResult SaveModelData([FromBody] RootObject ModelData)
         {            
@@ -39,6 +41,7 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
+        //Validate Model Name
         [HttpPost("CheckModelName")]
         public IActionResult CheckModelName([FromBody]string ProjectName)
         {
@@ -54,6 +57,7 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
+        //get all past projects names
         [HttpGet("GetProjectsName")]
         public IActionResult GetProjectsName()
         {
@@ -69,6 +73,7 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
+        //import certain project data
         [HttpPost("ImportProject")]
         public IActionResult ImportProject([FromBody]string ProjetName)
         {

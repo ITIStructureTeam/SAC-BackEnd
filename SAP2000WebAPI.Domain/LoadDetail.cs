@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //LoadDetail
     public class LoadDetail
     {
         public bool CoordSys { get; set; }

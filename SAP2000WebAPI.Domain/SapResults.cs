@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //SapResults
     public class SapResults
     {
         public List<SapStrainingActions> StrainingActions { get; set; }

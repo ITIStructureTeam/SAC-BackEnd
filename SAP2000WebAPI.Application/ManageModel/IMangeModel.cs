@@ -9,6 +9,7 @@ namespace SAP2000WebAPI.Application.ManageModel
 {
     public interface IMangeModel
     {
+        //Interface for ManageModel
         public static bool CheckModelName(string ProjectName)
         {
             return true;

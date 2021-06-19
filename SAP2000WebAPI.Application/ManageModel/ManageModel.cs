@@ -66,6 +66,7 @@ namespace SAP2000WebAPI.Application.ManageModel
 
     public class ManageModel : IMangeModel
     {
+        //global variable to get path
         public static string RelativeUserDirectory = @"..\SAC Projects";
         public static readonly string UserDirectory = Path.GetFullPath(RelativeUserDirectory);
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //Load
     public class Load
     {
         public string Pattern { get; set; }

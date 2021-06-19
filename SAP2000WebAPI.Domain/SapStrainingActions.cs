@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //SapStrainingActions
     public class SapStrainingActions
     {        
         public string FrameID { get; set; }

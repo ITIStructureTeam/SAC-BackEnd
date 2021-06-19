@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //Frame
     public class Frame
     {
         public int Label { get; set; }

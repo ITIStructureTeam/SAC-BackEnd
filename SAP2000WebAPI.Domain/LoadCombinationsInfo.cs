@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //LoadCombinationsInfo
     public class LoadCombinationsInfo
     {
         public string caseId { get; set; }

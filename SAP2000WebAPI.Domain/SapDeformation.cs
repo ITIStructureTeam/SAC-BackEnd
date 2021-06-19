@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //SapDeformation
     public class SapDeformation
     {
         public string FrameID { get; set; }

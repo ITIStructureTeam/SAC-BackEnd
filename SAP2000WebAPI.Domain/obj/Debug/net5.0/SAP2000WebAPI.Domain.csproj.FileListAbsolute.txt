@@ -9,3 +9,4 @@ C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP200
 C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.dll
 C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP2000WebAPI.Domain\obj\Debug\net5.0\ref\SAP2000WebAPI.Domain.dll
 C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.pdb
+C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.csprojAssemblyReference.cache

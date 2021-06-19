@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //Root Object
     public class RootObject
     {
         public string ProjectName { get; set; }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SAP2000WebAPI.Domain
 {
+    //SapReactions
     public class SapReactions
     {
         public string JointID { get; set; }
