@@ -66,19 +66,22 @@ namespace SAP2000WebAPI.Application.ManageModel
 
     public class ManageModel : IMangeModel
     {
-        //global variable to get path
+        #region Get Project Path
+
         public static string RelativeUserDirectory = @"..\SAC Projects";
         public static readonly string UserDirectory = Path.GetFullPath(RelativeUserDirectory);
+
+        #endregion
 
         #region Validate Model Name
 
         public static bool CheckModelName(string ProjectName)
         {
-            string ModelDirectory = UserDirectory + ProjectName;
+            string ModelDirectory = UserDirectory + Path.DirectorySeparatorChar + ProjectName;
             if (Directory.Exists(ModelDirectory))
             {
                 return false;
-            }    
+            }
             else
             {
                 try
@@ -90,7 +93,7 @@ namespace SAP2000WebAPI.Application.ManageModel
                 catch
                 {
                     return false;
-                }                                  
+                }
             }
         }
 
@@ -137,13 +140,13 @@ namespace SAP2000WebAPI.Application.ManageModel
             string JsonDirectory = UserDirectory + Path.DirectorySeparatorChar + ModelName + @"\Model JSON Data";
             string JsonPath = JsonDirectory + Path.DirectorySeparatorChar + "ModelData.json";
 
-            string ModelJsonData = JsonConvert.SerializeObject(ModelDataObject);            
+            string ModelJsonData = JsonConvert.SerializeObject(ModelDataObject);
 
             if (!Directory.Exists(ProjectDir))
             {
                 Directory.CreateDirectory(ProjectDir);
                 Directory.CreateDirectory(JsonDirectory);
-            }            
+            }
 
             if (File.Exists(JsonPath))
             {
@@ -263,13 +266,13 @@ namespace SAP2000WebAPI.Application.ManageModel
                     ModelDataObject.Materials[i].Poisson,
                     ModelDataObject.Materials[i].ThermalExpansion);
                 // assign Weight per unit volume property to material
-                 ret = mySapModel.PropMaterial.SetWeightAndMass(
-                    ModelDataObject.Materials[i].Name,
-                    1,                                                         //sets that we are adding weight not mass
-                    ModelDataObject.Materials[i].Weight);
+                ret = mySapModel.PropMaterial.SetWeightAndMass(
+                   ModelDataObject.Materials[i].Name,
+                   1,                                                         //sets that we are adding weight not mass
+                   ModelDataObject.Materials[i].Weight);
                 //Assign Special Concrete/Steel properties to the created material
                 //if concrete
-                if(ModelDataObject.Materials[i].MaterialType == 0)
+                if (ModelDataObject.Materials[i].MaterialType == 0)
                 {
                     ret = mySapModel.PropMaterial.SetOConcrete_1(
                     ModelDataObject.Materials[i].Name,
@@ -286,7 +289,7 @@ namespace SAP2000WebAPI.Application.ManageModel
                         ModelDataObject.Materials[i].Strength[0] * 1000,
                         ModelDataObject.Materials[i].Strength[1] * 1000,
                         1, 1, 0.015, 0.11, 0.17, -0.1);                  //Advanced material properties that we don't deal with yet
-                }                    
+                }
             }
             #endregion
 
@@ -465,7 +468,7 @@ namespace SAP2000WebAPI.Application.ManageModel
                 //assign restraints to points
                 ret = mySapModel.PointObj.SetRestraint(
                     ModelDataObject.Points[i].label.ToString(),
-                    ref RestraintsValue,                    
+                    ref RestraintsValue,
                     0);
             }
 
@@ -479,12 +482,17 @@ namespace SAP2000WebAPI.Application.ManageModel
             string SapCordinateSys = "Global";
             int LoadDir = 0;
             double FrameLength;
-            List<DeformationPoints> DeformationPoints_ = new List<DeformationPoints>();            
+            List<DeformationPoints> DeformationPoints_ = new List<DeformationPoints>();
             List<DummyPoint> DeformationPointsPos = new List<DummyPoint>();
             double[] FrameStartPoint = new double[3];
             double[] FrameEndPoint = new double[3];
-            int DeformationPointsPosCount;
+            double[] DrawFrameStartPoint = new double[3];
+            double[] DrawFrameEndPoint = new double[3];
+            int DeformationPointsPosCount, DefPointlabel;
             int NumberofStations = 0;
+            double xNew, yNew, zNew, xOld, yOld, zOld, xdiff, ydiff, zdiff, tol = 0.0000000000001;
+            bool PointExist = false;
+
 
             //get number of frames objects in the list
             int FramesCount = ModelDataObject.Frames.Count();
@@ -497,7 +505,20 @@ namespace SAP2000WebAPI.Application.ManageModel
             //loop for each Frame in the list
             for (i = 0; i < FramesCount; i++)
             {
+
+                DrawFrameStartPoint = ModelDataObject.Points.Find(key => key.label == ModelDataObject.Frames[i].StartPoint).position;
+                DrawFrameEndPoint = ModelDataObject.Points.Find(key => key.label == ModelDataObject.Frames[i].EndPoint).position;
                 //add frame object by coordinates
+                //ret = mySapModel.FrameObj.AddByCoord(
+                //    DrawFrameStartPoint[0],
+                //    DrawFrameStartPoint[1],
+                //    DrawFrameStartPoint[2],
+                //    DrawFrameEndPoint[0],
+                //    DrawFrameEndPoint[1],
+                //    DrawFrameEndPoint[2],
+                //    ref FrameName,
+                //    ModelDataObject.Frames[i].Section,
+                //    ModelDataObject.Frames[i].Label.ToString());
                 ret = mySapModel.FrameObj.AddByPoint(
                     ModelDataObject.Frames[i].StartPoint.ToString(),
                     ModelDataObject.Frames[i].EndPoint.ToString(),
@@ -505,14 +526,16 @@ namespace SAP2000WebAPI.Application.ManageModel
                     ModelDataObject.Frames[i].Section,
                     ModelDataObject.Frames[i].Label.ToString());
 
+
                 //Set Frame Rotation
                 ret = mySapModel.FrameObj.SetLocalAxes(
                     ModelDataObject.Frames[i].Label.ToString(),
                     ModelDataObject.Frames[i].Rotation);
 
+
                 //Set Frame Loads
                 if (ModelDataObject.Frames[i].Loads.Count() > 0)
-                {                    
+                {
                     //get Load Patterns count
                     LoadPatternsCount = ModelDataObject.Frames[i].Loads.Count();
 
@@ -524,7 +547,7 @@ namespace SAP2000WebAPI.Application.ManageModel
 
                         //assign each Load to the frame
                         for (k = 0; k < LoadsCount; k++)
-                        {              
+                        {
                             //check if Csys is global or local
                             if (ModelDataObject.Frames[i].Loads[j].LoadDetails[k].CoordSys == false)
                             {
@@ -595,10 +618,10 @@ namespace SAP2000WebAPI.Application.ManageModel
                                     true,
                                     false);
                             }
-                        }                        
+                        }
                     }
                 }
-                
+
                 //get frame start and end position
                 FrameStartPoint = ModelDataObject.Points.Find(key => key.label == ModelDataObject.Frames[i].StartPoint).position;
                 FrameEndPoint = ModelDataObject.Points.Find(key => key.label == ModelDataObject.Frames[i].EndPoint).position;
@@ -633,24 +656,48 @@ namespace SAP2000WebAPI.Application.ManageModel
                 DeformationPointsPos = DivideFrame(FrameStartPoint, FrameEndPoint);
                 DeformationPointsPosCount = DeformationPointsPos.Count();
 
+
                 for (j = 0; j < DeformationPointsPosCount; j++)
-                {                    
-                    ret = mySapModel.PointObj.AddCartesian(
+                {
+                    PointExist = false;
+                    xNew = DeformationPointsPos[j].X;
+                    yNew = DeformationPointsPos[j].Y;
+                    zNew = DeformationPointsPos[j].Z;
+                    DefPointlabel = ((ModelDataObject.Frames[i].Label * 1000000) + j);
+                    for (k = 0; k < PointsCount; k++)
+                    {
+                        xOld = ModelDataObject.Points[k].position[0];
+                        yOld = ModelDataObject.Points[k].position[1];
+                        zOld = ModelDataObject.Points[k].position[2];
+                        xdiff = Math.Abs(xOld - xNew);
+                        ydiff = Math.Abs(yOld - yNew);
+                        zdiff = Math.Abs(zOld - zNew);
+                        if (xdiff <= tol && ydiff <= tol && zdiff <= tol)
+                        {
+                            PointExist = true;
+                            DefPointlabel = ModelDataObject.Points[k].label;
+                            break;
+                        }
+                    }
+                    if (PointExist == false)
+                    {
+                        ret = mySapModel.PointObj.AddCartesian(
                         DeformationPointsPos[j].X,
                         DeformationPointsPos[j].Y,
                         DeformationPointsPos[j].Z,
                         ref TempPointName,
-                        ((ModelDataObject.Frames[i].Label * 1000000) + j).ToString(),
+                        DefPointlabel.ToString(),
                         "Global");
-                    PointsNamesTest.Add(TempPointName);
+                    }
                     DeformationPoint.AssociatedPoints.Add(
                         new Point()
                         {
-                            label = (ModelDataObject.Frames[i].Label * 1000000) + j,
-                            position = new double[] { 
+                            label = DefPointlabel,
+                            position = new double[] {
                                 DeformationPointsPos[j].X,
                                 DeformationPointsPos[j].Y,
-                                DeformationPointsPos[j].Z },
+                                DeformationPointsPos[j].Z
+                            },
                             Restraints = new bool[] {
                                 false,
                                 false,
@@ -675,7 +722,7 @@ namespace SAP2000WebAPI.Application.ManageModel
 
             //save model
             ret = mySapModel.File.Save(ModelPath);
-            
+
             //run model (this will create the analysis model)
             ret = mySapModel.Analyze.RunAnalysis();
 
@@ -1088,6 +1135,7 @@ namespace SAP2000WebAPI.Application.ManageModel
             #endregion
 
             #endregion
+
 
             return ModelResults;
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj": {}
+    "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI\\SAP2000WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj": {
+    "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj",
+        "projectUniqueName": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj",
         "projectName": "SAP2000WebAPI.Application",
-        "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj",
+        "projectPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj",
         "packagesPath": "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\obj\\",
+        "outputPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmed Dawood\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj"
+              "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
+                "projectPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
+    "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
+        "projectUniqueName": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
         "projectName": "SAP2000WebAPI.Domain",
-        "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
+        "projectPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\obj\\",
+        "outputPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmed Dawood\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -122,14 +122,14 @@
         }
       }
     },
-    "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj": {
+    "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI\\SAP2000WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj",
+        "projectUniqueName": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI\\SAP2000WebAPI.csproj",
         "projectName": "SAP2000WebAPI",
-        "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\SAP2000WebAPI.csproj",
+        "projectPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI\\SAP2000WebAPI.csproj",
         "packagesPath": "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI\\obj\\",
+        "outputPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmed Dawood\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -146,11 +146,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj"
+              "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj": {
+                "projectPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Application\\SAP2000WebAPI.Application.csproj"
               },
-              "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj"
+              "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj": {
+                "projectPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj"
               }
             }
           }

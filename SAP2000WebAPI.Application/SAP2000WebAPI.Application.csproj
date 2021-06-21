@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <Reference Include="SAP2000v18">
-      <HintPath>..\..\..\..\..\..\..\Program Files\Computers and Structures\SAP2000 18\SAP2000v18.dll</HintPath>
+      <HintPath>C:\Program Files\Computers and Structures\SAP2000 18\SAP2000v18.dll</HintPath>
     </Reference>
   </ItemGroup>
 

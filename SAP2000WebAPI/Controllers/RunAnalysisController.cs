@@ -6,30 +6,28 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace SAP2000WebAPI.Controllers
-{    
+{
     [ApiController]
     [Route("api/[Controller]")]
     public class RunAnalysisController : ControllerBase
     {
-        //Create Sap Model and return results
         [HttpPost("LoadFramesData")]
-        public IActionResult LoadFrameData([FromBody]string ProjectName)
+        public IActionResult LoadFrameData([FromBody] string ProjectName)
         {
             try
             {
                 SapResults ModelResults = ManageModel.CreateModel(ProjectName);
                 return Ok(ModelResults);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
         }
 
-        //Save Sap Model in user directory
         [HttpPost("SaveModel")]
         public IActionResult SaveModelData([FromBody] RootObject ModelData)
-        {            
+        {
             try
             {
                 ManageModel.SaveModel(ModelData);
@@ -41,14 +39,13 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
-        //Validate Model Name
         [HttpPost("CheckModelName")]
-        public IActionResult CheckModelName([FromBody]string ProjectName)
+        public IActionResult CheckModelName([FromBody] string ProjectName)
         {
             try
             {
                 bool Response_ = ManageModel.CheckModelName(ProjectName);
-                string ValidationResult = JsonConvert.SerializeObject(Response_.ToString());                
+                string ValidationResult = JsonConvert.SerializeObject(Response_.ToString());
                 return Ok(ValidationResult);
             }
             catch (Exception ex)
@@ -57,7 +54,6 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
-        //get all past projects names
         [HttpGet("GetProjectsName")]
         public IActionResult GetProjectsName()
         {
@@ -73,9 +69,8 @@ namespace SAP2000WebAPI.Controllers
             }
         }
 
-        //import certain project data
         [HttpPost("ImportProject")]
-        public IActionResult ImportProject([FromBody]string ProjetName)
+        public IActionResult ImportProject([FromBody] string ProjetName)
         {
             try
             {

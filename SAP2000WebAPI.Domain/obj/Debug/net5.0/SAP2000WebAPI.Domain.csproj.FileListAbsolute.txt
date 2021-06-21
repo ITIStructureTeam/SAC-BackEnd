@@ -10,3 +10,15 @@ C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP200
 C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP2000WebAPI.Domain\obj\Debug\net5.0\ref\SAP2000WebAPI.Domain.dll
 C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.pdb
 C:\Users\Ahmed Dawood\Documents\Visual Studio 2019\Projects\SAP2000WebAPI\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.csprojAssemblyReference.cache
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\bin\Debug\net5.0\SAP2000WebAPI.Domain.deps.json
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\bin\Debug\net5.0\SAP2000WebAPI.Domain.dll
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\bin\Debug\net5.0\ref\SAP2000WebAPI.Domain.dll
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\bin\Debug\net5.0\SAP2000WebAPI.Domain.pdb
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.csprojAssemblyReference.cache
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.AssemblyInfoInputs.cache
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.AssemblyInfo.cs
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.csproj.CoreCompileInputs.cache
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.dll
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\ref\SAP2000WebAPI.Domain.dll
+D:\ITI Study Stuff\Graduation Project\SAC-BackEnd\SAP2000WebAPI.Domain\obj\Debug\net5.0\SAP2000WebAPI.Domain.pdb

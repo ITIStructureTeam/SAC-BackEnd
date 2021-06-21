@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
+      "projectUniqueName": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
       "projectName": "SAP2000WebAPI.Domain",
-      "projectPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
+      "projectPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\SAP2000WebAPI.Domain.csproj",
       "packagesPath": "C:\\Users\\Ahmed Dawood\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmed Dawood\\Documents\\Visual Studio 2019\\Projects\\SAP2000WebAPI\\SAP2000WebAPI.Domain\\obj\\",
+      "outputPath": "D:\\ITI Study Stuff\\Graduation Project\\SAC-BackEnd\\SAP2000WebAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmed Dawood\\AppData\\Roaming\\NuGet\\NuGet.Config",
